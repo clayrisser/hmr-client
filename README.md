@@ -35,7 +35,9 @@ npm install --save hmr-client
 ## Usage
 
 ```js
-const client = new HotClient({ port: 3000 });
+import HRMClient from 'hmr-client';
+
+const client = new HMRClient({ port: 3000 });
 client.onConnected = async () => {
   console.log('connected');
 };

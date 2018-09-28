@@ -38,16 +38,16 @@ npm install --save hmr-client
 import HRMClient from 'hmr-client';
 
 const client = new HMRClient({ port: 3000 });
-client.onConnected = async () => {
+client.onConnected = () => {
   console.log('connected');
 };
-client.onHash = async message => {
+client.onHash = message => {
   console.log('hash', message.data)
 };
-client.onStillOk = async () => {
+client.onStillOk = () => {
   console.log('still-ok');
 };
-client.onOk = async () => {
+client.onOk = () => {
   console.log('ok');
 };
 client.onContentChanged = () => {

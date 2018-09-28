@@ -1,6 +1,6 @@
 {
   "name": "hmr-client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A client for communicating with hot module replacement (HMR)",
   "keywords": [
     "hmr-client",

@@ -34,7 +34,37 @@ npm install --save hmr-client
 
 ## Usage
 
-[Contribute](https://github.com/codejamninja/hmr-client/blob/master/CONTRIBUTING.md) usage docs
+```js
+const client = new HotClient({ port: 3000 });
+client.onConnected = async () => {
+  console.log('connected');
+};
+client.onHash = async message => {
+  console.log('hash', message.data)
+};
+client.onStillOk = async () => {
+  console.log('still-ok');
+};
+client.onOk = async () => {
+  console.log('ok');
+};
+client.onContentChanged = () => {
+  console.log('content-changed');
+};
+client.onWarnings = message => {
+  console.log('warnings', message);
+};
+client.onErrors = message => {
+  console.log('errors', message);
+};
+client.onClose = () => {
+  console.log('close');
+  console.log(
+    'The development server has disconnected.\n' +
+      'Refresh the page if necessary.'
+  );
+};
+```
 
 
 ## Support

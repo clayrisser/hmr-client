@@ -5,7 +5,7 @@ import { format as urlFormat } from 'url';
 @autobind
 export default class HotClient {
   constructor({
-    port = 6001,
+    port = 3000,
     protocol = window.location.protocol,
     hostname = window.location.hostname
   }) {

@@ -1,0 +1,55 @@
+{
+  "name": "hmr-client",
+  "version": "0.0.1",
+  "description": "A client for communicating with hot module replacement (HMR)",
+  "keywords": [
+    "hmr-client",
+    "hmr",
+    "hot-module-replacement"
+  ],
+  "homepage": "https://github.com/codejamninja/hmr-client",
+  "bugs": {
+    "url": "https://github.com/codejamninja/hmr-client/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/hmr-client"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "clean": "rimraf lib",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "format": "prettier --write ./src/**/*.js",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-everything": "^0.1.2",
+    "eslint": "^5.5.0",
+    "eslint-config-jam": "^0.1.4",
+    "rimraf": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}

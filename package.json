@@ -1,6 +1,6 @@
 {
   "name": "hmr-client",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A client for communicating with hot module replacement (HMR)",
   "keywords": [
     "hmr-client",
@@ -27,14 +27,19 @@
     "url": "https://github.com/codejamninja/hmr-client"
   },
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "npm run test && babel src -d lib",
     "clean": "rimraf lib",
     "lint": "npm run format && eslint ./",
     "lint:fix": "npm run format && eslint --fix ./",
     "format": "prettier --write ./src/**/*.js",
-    "prepublish": "npm run clean && npm run build"
+    "prepublish": "npm run clean && npm run build",
+    "test": "npm run lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "autobind-decorator": "^2.1.0",
+    "sockjs-client": "^1.3.0",
+    "url": "^0.11.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",

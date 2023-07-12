@@ -4,6 +4,8 @@
 
 > A client for communicating with hot module replacement (HMR)
 
+![](assets/hmr-client.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 ![](assets/hmr-client.png)
